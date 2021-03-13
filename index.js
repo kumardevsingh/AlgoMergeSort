@@ -20,7 +20,7 @@ const merge = (leftArr, rightArr) => {
 
 //console.log(merge([29, 30], [8, 19]));
 
-const megeSort = (array) => {
+const mergeSort = (array) => {
     if (array.length <= 1) {
         return array;
     }
@@ -29,11 +29,11 @@ const megeSort = (array) => {
     const rightArr = array.slice(middleIndex);
 
     return merge(
-        megeSort(leftArr),
-        megeSort(rightArr)
+        mergeSort(leftArr),
+        mergeSort(rightArr)
     );
 }
 
 const array = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
 
-console.log(megeSort(array));
+console.log(mergeSort(array));
